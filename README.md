@@ -4,9 +4,13 @@
     Laravel Package for changing the view of typical Laravel Auth.
 </p>
 ### Features
+
 * It Just default Laravel Auth.
-* It will just change the User Login Page View. 
+
+* It will just change the User Login Page View.  
+
 * Easy way to make Authentication in Your Laravel Application. 
+
 
 ### Installation
 Go to terminal and run this command
@@ -16,6 +20,7 @@ composer require rakib/lara-auth
 ```
 
 Wait for few minutes. Composer will automatically install this package for your project.
+
 Below **Laravel 5.5** open `config/app` and add this line in `providers` section
 
 ```php
@@ -28,8 +33,11 @@ php artisan vendor:publish
 ```
 Then Find out The number of 
 `Rakib\LaraAuth\LaraAuthServiceProvider` 
+
 That's it !! 
+
 You Are Done.
+
 Let's Have fun with new login process.
 
 ## Credits
