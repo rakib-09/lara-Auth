@@ -5,7 +5,7 @@ namespace Rakib\LaraAuth\Http\Controllers\Authentication;
 use App\Http\Requests\LoginRequest;
 use App\Http\Requests\RegisterRequest;
 use App\Http\Controllers\Controller;
-use App\Services\AuthService;
+use Rakib\LaraAuth\Services\AuthService;
 
 class AuthController extends Controller
 {

@@ -7,6 +7,7 @@
                 <div class="card">
                     <div class="card-header">{{ __('Login') }}</div>
                     <div class="card-body">
+                        @if(isset($errors))
                         @if ($errors->any())
                             <div class="alert alert-danger">
                                 <ul style="margin:0px;padding:0px;">
@@ -16,6 +17,7 @@
                                 </ul>
                             </div>
                         @endif
+                        @endif
                         <form method="POST" action="{{ route('login') }}">
                             @csrf
                             <div class="form-group row">
@@ -23,14 +25,16 @@
 
                                 <div class="col-md-6">
                                     @if(session()->has('email'))
-                                        <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{session()->get('email')}}" required readonly>
+                                        <input id="email" type="email" class="form-control" name="email" value="{{session()->get('email')}}" required readonly>
                                     @else
-                                        <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
+                                        <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
                                     @endif
+                                    @if(isset($errors))
                                     @if ($errors->has('email'))
                                         <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('email') }}</strong>
                                     </span>
+                                    @endif
                                     @endif
                                 </div>
                             </div>
@@ -39,12 +43,13 @@
                                 <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
-
+                                    <input id="password" type="password" class="form-control" name="password" required>
+                                    @if(isset($errors))
                                     @if ($errors->has('password'))
                                         <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('password') }}</strong>
                                     </span>
+                                    @endif
                                     @endif
                                 </div>
                             </div>

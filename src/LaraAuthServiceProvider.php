@@ -17,6 +17,7 @@ class LaraAuthServiceProvider extends ServiceProvider
     {
         Artisan::call('storage:link');
         $this->loadRoutesFrom(__DIR__ . '/Route/web.php');
+        $this->loadViewsFrom(__DIR__.'/Views', 'laraAuth');
 
 
         //publish everything
