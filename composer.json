@@ -1,0 +1,19 @@
+{
+    "name": "rakib/lara-auth",
+    "description": "Just get rid of the typical laravel auth design with LaraAuth and give your user new Glimpse of new Auth System.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rakib-09",
+            "email": "rakib.rumi09@gmail.com"
+        }
+    ],
+    "minimum-stability": "beta",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Rakib\\LaraAuth\\": "src/"
+        }
+    }
+}

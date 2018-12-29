@@ -1,0 +1,90 @@
+<?php
+
+namespace App\Http\Controllers\Authentication;
+
+use App\Http\Requests\LoginRequest;
+use App\Http\Requests\RegisterRequest;
+use App\Http\Controllers\Controller;
+use App\Services\AuthService;
+
+class AuthController extends Controller
+{
+    protected $authService;
+
+    public function __construct(AuthService $authService)
+    {
+        $this->middleware('guest')->except(['logout','getLoginList']);
+        $this->middleware('auth')->only('logout');
+
+        $this->authService = $authService;
+
+    }
+
+    public function getRegisterForm()
+    {
+        return view('Authentication.registerForm');
+    }
+
+    public function registration(RegisterRequest $request)
+    {
+        $data = $request->validated();
+        if ($this->authService->register($data)) {
+            return redirect('/home');
+        }
+    }
+
+    public function getLoginForm()
+    {
+        if(request()->get('email'))
+        {
+            session()->flash('email',request()->get('email'));
+        }
+
+        return view('Authentication.loginForm');
+    }
+
+    public function login(LoginRequest $request)
+    {
+        $data = $request->validated();
+
+        if ($this->authService->login($data)) {
+            return redirect('/home');
+        } else {
+            $errors = [
+                'error' => 'Credentials do not match!'
+            ];
+            return redirect()->back()->withErrors($errors);
+        }
+    }
+
+    public function getLoginList()
+    {
+        $userList = $this->authService->getLoginList();
+        if($userList)
+        {
+            return view('Authentication.loginList', compact('userList'));
+        }
+        else {
+            return view('Authentication.loginForm');
+        }
+    }
+
+    public function getForgetPasswordForm()
+    {
+        return view('Authentication.forgetPassword');
+    }
+
+    public function emailForgetPassword()
+    {
+
+    }
+
+    public function logout()
+    {
+        if ($this->authService->logout()) {
+            return redirect('/');
+        }
+    }
+
+
+}
