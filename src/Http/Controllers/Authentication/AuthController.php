@@ -2,8 +2,8 @@
 
 namespace Rakib\LaraAuth\Http\Controllers\Authentication;
 
-use App\Http\Requests\LoginRequest;
-use App\Http\Requests\RegisterRequest;
+use Rakib\LaraAuth\Http\Requests\LoginRequest;
+use Rakib\LaraAuth\Http\Requests\RegisterRequest;
 use App\Http\Controllers\Controller;
 use Rakib\LaraAuth\Services\AuthService;
 

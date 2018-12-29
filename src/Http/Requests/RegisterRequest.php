@@ -1,6 +1,6 @@
 <?php
 
-namespace AppRakib\LaraAuth\Http\Requests;
+namespace Rakib\LaraAuth\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
