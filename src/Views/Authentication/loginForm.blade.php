@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('laraAuth::layouts.app')
 
 @section('content')
     <div class="container">
