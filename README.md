@@ -3,6 +3,7 @@
 <p align="center">
     Laravel Package for changing the view of typical Laravel Auth.
 </p>
+
 ### Features
 
 * It Just default Laravel Auth.
