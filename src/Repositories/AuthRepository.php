@@ -5,9 +5,9 @@
  * Date: 28/12/18
  * Time: 1:21 PM
  */
-namespace App\Repositories;
+namespace Rakib\LaraAuth\Repositories;
 
-use App\User;
+use Rakib\LaraAuth\Models\User;
 
 class AuthRepository extends Repository
 {

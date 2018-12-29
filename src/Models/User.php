@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace Rakib\LaraAuth\Models;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;

@@ -9,6 +9,7 @@ Here is the Routes for Laravel Auth. All the same as Laravel typical Auth.
 We just update a little bit.
 |
 */
+Route::group(['namespace' => 'Rakib\\LaraAuth\\Controller'], function (){
 
     Route::get('/register', 'Authentication\\AuthController@getRegisterForm')->name('register');
     Route::post('/register', 'Authentication\\AuthController@registration')->name('register');
@@ -26,5 +27,4 @@ We just update a little bit.
     Route::post('/password/update', 'Authentication\\ResetPasswordController@reset')->name('password.update');
 
     Route::get('/home', 'HomeController@index')->name('home');
-
-
+});

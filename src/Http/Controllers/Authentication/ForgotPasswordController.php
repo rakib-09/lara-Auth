@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Authentication;
+namespace Rakib\LaraAuth\Http\Controllers\Authentication;
 
 use App\Http\Controllers\Controller;
 use Rakib\LaraAuth\Traits\SendsPasswordResetEmails;

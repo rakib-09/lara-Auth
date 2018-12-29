@@ -6,7 +6,7 @@
  * Time: 2:01 PM
  */
 
-namespace  App\Services;
+namespace  Rakib\LaraAuth\Services;
 
 Abstract class Service {
 

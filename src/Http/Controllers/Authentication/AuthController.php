@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Authentication;
+namespace Rakib\LaraAuth\Http\Controllers\Authentication;
 
 use App\Http\Requests\LoginRequest;
 use App\Http\Requests\RegisterRequest;
@@ -22,7 +22,7 @@ class AuthController extends Controller
 
     public function getRegisterForm()
     {
-        return view('Authentication.registerForm');
+        return view('laraAuth::Authentication.registerForm');
     }
 
     public function registration(RegisterRequest $request)
@@ -40,7 +40,7 @@ class AuthController extends Controller
             session()->flash('email',request()->get('email'));
         }
 
-        return view('Authentication.loginForm');
+        return view('laraAuth::Authentication.loginForm');
     }
 
     public function login(LoginRequest $request)
@@ -62,16 +62,16 @@ class AuthController extends Controller
         $userList = $this->authService->getLoginList();
         if($userList)
         {
-            return view('Authentication.loginList', compact('userList'));
+            return view('laraAuth::Authentication.loginList', compact('userList'));
         }
         else {
-            return view('Authentication.loginForm');
+            return view('laraAuth::Authentication.loginForm');
         }
     }
 
     public function getForgetPasswordForm()
     {
-        return view('Authentication.forgetPassword');
+        return view('laraAuth::Authentication.forgetPassword');
     }
 
     public function emailForgetPassword()

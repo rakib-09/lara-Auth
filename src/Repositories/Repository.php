@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\Repositories;
+namespace Rakib\LaraAuth\Repositories;
 
 abstract class Repository
 {

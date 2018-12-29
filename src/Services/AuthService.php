@@ -5,9 +5,9 @@
  * Date: 28/12/18
  * Time: 2:01 PM
  */
-namespace Åpp\Services;
+namespace Rakib\LaraAuth\Services;
 
-use App\Repositories\AuthRepository;
+use Rakib\LaraAuth\Repositories\AuthRepository;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Cookie;
