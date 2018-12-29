@@ -1,6 +1,5 @@
-<p align="center"><a href="https://github.com/rakib-09/lara-auth" target="_blank"><img src="./lock-icon.svg">
-<h1>LaraAuth</h1> 
-</a></p>
+<p align="center"><a href="https://github.com/rakib-09/lara-auth" target="_blank"><img src="./icon.svg" width=70>
+</a><h1>LaraAuth</h1> </p>
 <p align="center">
     Laravel Package for changing the view of typical Laravel Auth.
 </p>
