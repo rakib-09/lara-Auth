@@ -43,8 +43,8 @@ Let's Have fun with new login process.
 
 ## Credits
 - [Rakibul Hasan](https://github.com/rakib-09)
+- [Aryan Ahmed](https://github.com/thearyanahmed)
 - Thanks to [Appzgear](https://www.flaticon.com/authors/appzgear) for icon.
-- [All Contributors](../../contributors)
 
 ### Security Vulnerabilities
 If you discover a security vulnerability within LaraAuth, please send an e-mail to Rakibul Hasan via [rakib_rumi09@live.com](mailto:rakib_rumi09@live.com).
